@@ -1,11 +1,17 @@
 import styled from 'styled-components'
+import { Cart } from './components/cart'
 import './index.css'
+
+import { ListItens } from './components/list-itens'
 
 function App() {
   return (
-      <Main>
-        <h1>Hello World</h1>
-      </Main>
+    <Main>
+      <Div>
+        <ListItens />
+        <Cart />
+      </Div>
+    </Main>
   )
 }
 
@@ -15,5 +21,10 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin: 50px 0px;
+  `
+  
+  const Div = styled.div`
+  display: flex;
+  gap: 40px;
 `
