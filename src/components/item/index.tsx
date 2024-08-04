@@ -1,5 +1,7 @@
-import { FunctionComponent } from "react";
-import { Button } from "../button-add-to-cart"
+import { FunctionComponent, useState } from "react";
+import { addToCart } from "../action/add-to-cart";
+import { ButtonAddToCart } from "../button-add-to-cart/addToCart/addToCart";
+import { ButtonQuantity } from "../button-add-to-cart/cartQuant/cartquant";
 
 interface CardItemProps {
     data: {
@@ -16,13 +18,26 @@ interface CardItemProps {
 }
 
 export const CardItem: FunctionComponent<CardItemProps> = ({ data }) => {
+
+    const [border, setBorder] = useState(false)
+
+    const buttonClick = () => {
+        addToCart(data)
+        setBorder(true)        
+    }
+
     return (
         <li>
-            <img className="product-image" src={data.image.desktop} alt={data.name} />
-            <Button>Add to cart</Button>
+            <img className={`product-image${border ? '-border' : ''}`} src={data.image.desktop} alt={data.name} />
+
+            {border ? <ButtonQuantity/> : <ButtonAddToCart buttonClick={buttonClick}/>}
+
             <p className="category">{data.category}</p>
+
             <p className="name">{data.name}</p>
+
             <p className="price">${data.price}</p>
+
         </li>
     )
 };
