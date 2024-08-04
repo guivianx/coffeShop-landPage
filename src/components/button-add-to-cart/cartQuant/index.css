@@ -1,0 +1,20 @@
+.button-count-increment {
+    width: 19px;
+    height: 19px;
+    border: 1px solid var(--Rose-50);
+    padding: 2px;
+    border-radius: 50px;
+}
+
+.button-count-decrement {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--Rose-50);
+    padding: 5px;
+    border-radius: 50px;
+
+}
+
+p {
+    font-weight: var(--Weight700);
+}
