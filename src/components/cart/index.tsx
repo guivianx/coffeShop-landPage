@@ -1,13 +1,14 @@
-import styled from "styled-components"
 import "../../index.css"
-import svgCake from "../../assets/images/illustration-empty-cart.svg"
+import { CartEmpty } from "./cart-empty"
+import styled from "styled-components"
+import { CartItens } from "./cart-itens"
 
 export const Cart = () => {
     return (
         <Div>
             <h2>You Cart ({"0"})</h2>
-            <img src={svgCake} alt="delivy" />
-            <p className="cart-empty">You added items will appear here</p>
+            {/* <CartEmpty /> */}
+            <CartItens />
         </Div>
     )
 }
@@ -17,9 +18,11 @@ const Div = styled.div`
     background-color: var(--Rose-50);
     border-radius: 10px;
     width: 400px;
-    max-height: 345px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 
-    
 
 `
+
