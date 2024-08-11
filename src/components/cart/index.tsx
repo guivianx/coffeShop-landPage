@@ -2,13 +2,18 @@ import "../../index.css"
 import { CartEmpty } from "./cart-empty"
 import styled from "styled-components"
 import { CartItens } from "./cart-itens"
+import { FunctionComponent } from "react"
+import './index.css'
 
-export const Cart = () => {
+
+export const Cart: FunctionComponent<any> = ({ cartItems, removeItem }) => {  
+      
+    let quantityCart: number = Object.keys(cartItems).length 
+        
     return (
         <Div>
-            <h2>You Cart ({"0"})</h2>
-            {/* <CartEmpty /> */}
-            <CartItens />
+            <h2 className="cart-quantity">You Cart ({quantityCart})</h2>
+            {quantityCart === 0 ? <CartEmpty /> : <CartItens item={cartItems} removeItem={removeItem} /> }            
         </Div>
     )
 }
