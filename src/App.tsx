@@ -1,15 +1,27 @@
-import styled from 'styled-components'
+import { ListItens } from './components/list-itens'
 import { Cart } from './components/cart'
+import styled from 'styled-components'
+import { useState } from 'react'
 import './index.css'
 
-import { ListItens } from './components/list-itens'
-
 function App() {
+
+  const [cartItems, setCartItems] = useState<Array<object>>([])
+
+  function addToCart(item: object) {
+    setCartItems([...cartItems, item])
+  }
+  
+  function removeItem(id: number) {
+    const itemRemove = cartItems.splice(id, 1)
+    setCartItems(cartItems.filter(item => item !== itemRemove))
+  }
+
   return (
     <Main>
       <Div>
-        <ListItens />
-        <Cart/>
+        <ListItens addToCart={addToCart} cartItems={cartItems} />
+        <Cart cartItems={cartItems} removeItem={removeItem}/>
       </Div>
     </Main>
   )
@@ -23,8 +35,8 @@ const Main = styled.main`
   align-items: center;
   margin: 50px 0px;
   `
-  
-  const Div = styled.div`
+
+const Div = styled.div`
   display: flex;
   gap: 40px;
 `
