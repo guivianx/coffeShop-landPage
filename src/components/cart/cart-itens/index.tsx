@@ -1,62 +1,42 @@
-import styled from "styled-components"
+import { FunctionComponent } from "react"
 import svg from "../../../assets/images/icon-carbon-neutral.svg"
+import { Item } from "../item"
+import './index.css'
 
-export const CartItens = () => {
-    return (
-        <DivCart>
-            
-
-            <DivOrderTotal>
-                <P>Order total</P>
-                <h3>${}</h3>
-            </DivOrderTotal>
-            <DivMessage> 
-                <img src={svg} alt="carbon-neutral" /> 
-                This is a<strong>carbon-neutral</strong>delivery
-            </DivMessage>
-            <Button>Confirm order</Button>
-        </DivCart>
-    )
+interface CartItensProps {
+    item: {
+        image: {
+            thumbnail: string,
+            mobile: string,
+            tablet: string,
+            desktop: string,
+        },
+        name: string,
+        category: string,
+        price: number,
+        index: number,
+        map: Function
+    },
+    removeItem: Function,
 }
 
+export const CartItens: FunctionComponent<CartItensProps> = ({ item, removeItem }) => {
+    return (
+        <div className="divmain">
 
-const DivOrderTotal = styled.div`    
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
+            <ul>
+                {item.map((item: any, index: number) => (<Item product={item} key={index} id={index} removeItem={removeItem} />))}
+            </ul>
 
-` 
-
-const P = styled.p`
-    color: var(--Rose-900);
-`
-
-const DivMessage =styled.div`
-    padding: 15px;
-    background-color: var(--Rose-100);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    gap: 10px;
-    color: var(--Rose-900);
-
-`
-
-
-const DivCart = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-`
-
-const Button = styled.button`
-    background-color: var(--Red);
-    padding: 20px 0px;
-    color: var(--Rose-50);
-    border-radius: 50px;
-    font-weight: var(--Weight600);
-    cursor: pointer;
-`
+            <div className="div-total-order">
+                <p className="order-total">Order total</p>
+                <h3 className="total-price">${ }</h3>
+            </div>
+            <div className="div-message">
+                <img src={svg} alt="carbon-neutral" />
+                This is a<strong>carbon-neutral</strong>delivery
+            </div>
+            <button>Confirm order</button>
+        </div>
+    )
+}
