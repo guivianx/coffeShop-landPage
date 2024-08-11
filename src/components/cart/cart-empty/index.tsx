@@ -1,21 +1,11 @@
 import svgCake from "../../../assets/images/illustration-empty-cart.svg"
-import styled from "styled-components"
+import './index.css'
 
 export const CartEmpty = () => {
     return (
-        <DivCart>
+        <div className="cart-empty-div">
             <img src={svgCake} alt="delivy" />
             <p className="cart-empty">You added items will appear here</p>
-        </DivCart>
+        </div>
     )
 }
-
-const DivCart = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 50px;
-
-`
