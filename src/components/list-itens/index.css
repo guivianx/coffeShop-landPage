@@ -1,0 +1,10 @@
+h1 {
+    color: var(--Rose-900);
+    font-size: 4.5rem;
+}
+
+.list-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem
+}

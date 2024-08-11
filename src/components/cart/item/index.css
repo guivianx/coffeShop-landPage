@@ -1,0 +1,48 @@
+.item-cart {
+    display: flex;   
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Rose-100);
+    align-items: center;
+}
+
+.item-cart-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.item-cart-details {
+    display: flex;
+    margin: 10px 0px;
+    gap: 10px;
+}
+
+.product-name {
+    color: var(--Rose-900);
+    font-weight: var(--Weight600);
+    font-size: 1.6rem;
+}
+
+.item-quantity {
+    color: var(--Red);
+    font-weight: var(--Weight700);
+}
+
+.item-price {
+    color: var(--Rose-400);
+}
+
+
+.item-price-total {
+    color: var(--Rose-500);
+    font-weight: var(--Weight600);
+}
+
+.icon-remove {
+    width: 20px;    
+    height: 20px;
+    border-radius: 10px;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid var(--Rose-300)
+}

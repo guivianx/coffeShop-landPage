@@ -1,20 +1,50 @@
-.button-count-increment {
-    width: 19px;
-    height: 19px;
-    border: 1px solid var(--Rose-50);
-    padding: 2px;
+.button-count-quantity {
+    background-color: var(--Red);
+    font-weight: var(--Weight600);
+    color: var(--Rose-900);
+    border: 1px solid var(--Rose-500);
+    padding: 15px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 84px;
+    color: var(--Rose-50);
+    justify-content: space-between;
+    cursor: pointer;
+    width: 195px;
+    height: 55px;
+
+}
+
+.increment {
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--Rose-50);
+    padding: 4px;
     border-radius: 50px;
 }
 
-.button-count-decrement {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--Rose-50);
+.decrement {
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--Rose-50);
     padding: 5px;
     border-radius: 50px;
-
 }
 
-p {
-    font-weight: var(--Weight700);
+.disable {
+    opacity: 0.4;
+    cursor: no-drop;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--Rose-50);
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.quantityProduct {
+    color: var(--Rose-50);
 }

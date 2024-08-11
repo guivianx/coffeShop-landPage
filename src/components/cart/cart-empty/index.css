@@ -1,0 +1,15 @@
+
+.cart-empty {
+    color: var(--Rose-500);
+    font-weight: var(--Weight600);
+}
+
+.cart-empty-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+} 
+    

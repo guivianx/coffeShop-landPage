@@ -1,0 +1,38 @@
+.total-price, .order-total {
+    color: var(--Rose-900);
+}
+
+.divmain {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.div-total-order {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-message {
+    padding: 15px;
+    background-color: var(--Rose-100);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    gap: 10px;
+    color: var(--Rose-900);
+
+}
+
+button {
+    background-color: var(--Red);
+    padding: 20px 0px;
+    color: var(--Rose-50);
+    border-radius: 50px;
+    font-weight: var(--Weight600);
+    cursor: pointer;
+}
