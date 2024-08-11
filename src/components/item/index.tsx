@@ -1,7 +1,7 @@
-import { FunctionComponent, useState } from "react";
-import { addToCart } from "../action/add-to-cart";
+import { FunctionComponent } from "react";
 import { ButtonAddToCart } from "../button-add-to-cart/addToCart/addToCart";
 import { ButtonQuantity } from "../button-add-to-cart/cartQuant/cartquant";
+import './index.css'
 
 interface CardItemProps {
     data: {
@@ -14,30 +14,27 @@ interface CardItemProps {
         name: string,
         category: string,
         price: number
-    }
+    },
+    addToCart: Function,
+    cartItems: object[],
 }
 
-export const CardItem: FunctionComponent<CardItemProps> = ({ data }) => {
 
-    const [border, setBorder] = useState(false)
+export const CardItem: FunctionComponent<CardItemProps> = ({ data, addToCart, cartItems }) => {
 
-    const buttonClick = () => {
-        addToCart(data)
-        setBorder(true)        
-    }
+    const selected = cartItems.some((item: any) => item.name === data.name)
 
     return (
-        <li>
-            <img className={`product-image${border ? '-border' : ''}`} src={data.image.desktop} alt={data.name} />
+        <li className="item">
+            <img className={selected ? 'selected' : 'Unselected'} src={data.image.desktop} alt={data.name} />
 
-            {border ? <ButtonQuantity/> : <ButtonAddToCart buttonClick={buttonClick}/>}
+            {selected ? <ButtonQuantity /> : <ButtonAddToCart addToCart={addToCart} data={data} />}
 
             <p className="category">{data.category}</p>
 
             <p className="name">{data.name}</p>
 
             <p className="price">${data.price}</p>
-
         </li>
     )
-};
+}
