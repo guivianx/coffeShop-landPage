@@ -28,11 +28,13 @@
 
 }
 
-button {
+.button-cart {
     background-color: var(--Red);
     padding: 20px 0px;
     color: var(--Rose-50);
     border-radius: 50px;
+    font-size: 1.6rem;
     font-weight: var(--Weight600);
     cursor: pointer;
+    font-family: var(--Font-family);
 }
