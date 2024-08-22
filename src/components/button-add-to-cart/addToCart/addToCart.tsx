@@ -18,7 +18,7 @@ interface ButtonProps {
     addToCart: Function
 }
 
-export const ButtonAddToCart: FunctionComponent<ButtonProps> = ({  addToCart, data}) => {    
+export const ButtonAddToCart: FunctionComponent<ButtonProps> = ({  addToCart, data }) => {    
     return (
         <button className="button-add-to-cart" onClick={() => { addToCart(data, true) }}>
             <img src={svgCart} alt="delivy" />
