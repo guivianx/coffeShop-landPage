@@ -22,7 +22,7 @@ interface CartItensProps {
     setConfirmOrder: Function
 }
 
-export const CartItens: FunctionComponent<CartItensProps> = ({ item, removeItem, setConfirmOrder }) => {
+export const CartItens: FunctionComponent<CartItensProps> = ({ item, removeItem, setConfirmOrder }) => {    
 
     return (
         <div className="divmain">
@@ -43,7 +43,7 @@ export const CartItens: FunctionComponent<CartItensProps> = ({ item, removeItem,
 
                 <img src={svg} alt="carbon-neutral" />
 
-                This is a<strong>carbon-neutral</strong>delivery
+                This is a <strong>carbon-neutral</strong> delivery
 
             </div>
 

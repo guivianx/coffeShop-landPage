@@ -24,11 +24,12 @@ export const CardItem: FunctionComponent<CardItemProps> = ({ data, addToCart, ca
 
     const selected = cartItems.some((item: any) => item.name === data.name)
 
-        const [quantity, setQuantity] = useState(data.quantity)
+    const [quantity, setQuantity] = useState(data.quantity)
 
     return (
 
         <li className="item">
+
             <img className={selected ? 'selected' : 'Unselected'} src={data.image.desktop} alt={data.name} />
 
             { selected ?
@@ -42,6 +43,7 @@ export const CardItem: FunctionComponent<CardItemProps> = ({ data, addToCart, ca
             <p className="name">{data.name}</p>
 
             <p className="price">${data.price.toFixed(2)}</p>
+            
         </li>
     )
 }
