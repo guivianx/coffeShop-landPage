@@ -3,7 +3,7 @@ import svgIncrement from '../../../assets/images/icon-increment-quantity.svg'
 import svgDecrement from '../../../assets/images/icon-decrement-quantity.svg'
 import './index.css'
 
-interface Props {
+interface ButtonProps {
     itemQuantity: number,
     setQuantity: Function,
     addToCart: Function,
@@ -21,11 +21,15 @@ interface Props {
     }
 }
 
-export const ButtonQuantity: FunctionComponent<Props> = ({ itemQuantity, setQuantity, addToCart, data }) => {
+export const ButtonQuantity: FunctionComponent<ButtonProps> = ({ itemQuantity, setQuantity, addToCart, data }) => {
     return (
         <button className='button-count-quantity'>
 
-            <img onClick={() => { itemQuantity === 1 ? '' : setQuantity(itemQuantity - 1) ; addToCart(data, false)}} className={itemQuantity > 1 ? 'decrement' : 'disable'} src={svgDecrement} alt="delivy" />
+            <img 
+                onClick={() => { itemQuantity != 1 ? setQuantity(itemQuantity - 1) : null ; addToCart(data, false) }} 
+            
+                className={itemQuantity > 1 ? 'decrement' : 'disable'} src={svgDecrement} alt="delivy" 
+            />
 
             <p className="quantityProduct">{itemQuantity}</p>
 
