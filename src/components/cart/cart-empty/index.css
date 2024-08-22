@@ -1,4 +1,3 @@
-
 .cart-empty {
     color: var(--Rose-500);
     font-weight: var(--Weight600);
@@ -10,7 +9,17 @@
     align-items: center;
     gap: 20px;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+
+    height: 275px;
 } 
     
+
+.img-empty {
+    width: 160px;
+}
+
+@media screen and (max-width: 450px) {
+    .img-empty {
+        width: 150px;
+    }
+}

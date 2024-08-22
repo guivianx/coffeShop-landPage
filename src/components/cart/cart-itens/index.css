@@ -28,6 +28,12 @@
 
 }
 
+@media screen and (max-width: 450px) {
+    .div-message {
+        flex-direction: column;
+    }
+}
+
 .button-cart {
     background-color: var(--Red);
     padding: 20px 0px;
@@ -37,4 +43,5 @@
     font-weight: var(--Weight600);
     cursor: pointer;
     font-family: var(--Font-family);
+    margin-bottom: 10px;
 }
