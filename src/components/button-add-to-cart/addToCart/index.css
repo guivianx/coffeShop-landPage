@@ -1,27 +1,31 @@
 .button-add-to-cart {
     background-color: var(--Rose-50);
-    font-weight: var(--Weight700);
-    color: var(--Rose-900);
     border: 1px solid var(--Rose-500);
-    padding: 15px 20px;
+    color: var(--Rose-900);
+    
+    font-weight: var(--Weight700);
     border-radius: 50px;
+
+    position: absolute;
+    padding: 15px 20px;
+    width: 195px;
+    bottom: 84px;
+    height: 55px;
+    
     display: flex;
+    gap: 10px;
     align-self: center;
     align-items: center;
-    gap: 10px;
-    position: absolute;
-    bottom: 84px;
-    width: 195px;
-    height: 55px;
-    cursor: pointer;
     justify-content: center;
+
+    cursor: pointer;
 }
 
 .button-add-to-cart:hover{
     color: var(--Red);
     border: 1px solid var(--Red);
-
 }
+
 
 .txt-add-to-cart {
     font-weight: var(--Weight700)    
