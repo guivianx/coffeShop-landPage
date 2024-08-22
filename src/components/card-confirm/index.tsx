@@ -2,11 +2,12 @@ import { FunctionComponent } from 'react'
 import svg from '../../assets/images/icon-order-confirmed.svg'
 import './index.css'
 
-interface Props {
+interface CardConfirmProps {
     cartItems: object[]
 }
 
-export const CardConfirm: FunctionComponent<Props> = ({ cartItems }) => {
+export const CardConfirm: FunctionComponent<CardConfirmProps> = ({ cartItems }) => {
+    
     return (
         <>
             <div className='overlay'>
@@ -17,7 +18,7 @@ export const CardConfirm: FunctionComponent<Props> = ({ cartItems }) => {
 
                     <h1>Order Confirmed</h1>
 
-                    <p className='text'>We hope you enjoy your food!</p>
+                    <p className='text-card'>We hope you enjoy your food!</p>
 
                     <div>
 
