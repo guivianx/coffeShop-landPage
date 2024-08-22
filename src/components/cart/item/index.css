@@ -38,7 +38,7 @@
     font-weight: var(--Weight600);
 }
 
-.icon-remove {
+.remove-item {
     width: 20px;    
     height: 20px;
     border-radius: 10px;
