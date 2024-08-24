@@ -10,7 +10,7 @@ export const CardConfirm: FunctionComponent<CardConfirmProps> = ({ cartItems }) 
     
     return (
         <>
-            <div className='overlay'>
+            <div className='overlay'> 
 
                 <div className="card-confirm">
 

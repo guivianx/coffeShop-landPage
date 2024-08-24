@@ -6,8 +6,6 @@ interface ItemProps {
     product: {
         image: {
             thumbnail: string,
-            mobile: string,
-            tablet: string,
             desktop: string,
         },
         name: string,

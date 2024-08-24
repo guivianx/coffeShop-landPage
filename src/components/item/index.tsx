@@ -7,8 +7,6 @@ interface CardItemProps {
     data: {
         image: {
             thumbnail: string,
-            mobile: string,
-            tablet: string,
             desktop: string,
         },
         name: string,
