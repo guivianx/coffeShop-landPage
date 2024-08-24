@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react"
-import svg from "../../../assets/images/icon-carbon-neutral.svg"
+import svg from "/images/icon-carbon-neutral.svg"
 import { Item } from "../item"
 import './index.css'
 

@@ -1,4 +1,4 @@
-import svgCart from "../../../assets/images/icon-add-to-cart.svg"
+import svgCart from "/images/icon-add-to-cart.svg"
 import { FunctionComponent } from "react"
 import './index.css'
 

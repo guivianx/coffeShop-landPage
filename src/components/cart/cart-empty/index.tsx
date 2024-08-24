@@ -1,4 +1,4 @@
-import svgCake from "../../../assets/images/illustration-empty-cart.svg"
+import svgCake from "/images/illustration-empty-cart.svg"
 import './index.css'
 
 export const CartEmpty = () => {

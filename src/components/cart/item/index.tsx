@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react"
-import svg from "../../../assets/images/icon-remove-item.svg"
+import svg from "/images/icon-remove-item.svg"
 import './index.css'
 
 interface ItemProps {

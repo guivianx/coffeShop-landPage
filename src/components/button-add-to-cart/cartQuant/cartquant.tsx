@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import svgIncrement from '../../../assets/images/icon-increment-quantity.svg'
-import svgDecrement from '../../../assets/images/icon-decrement-quantity.svg'
+import svgIncrement from '/images/icon-increment-quantity.svg'
+import svgDecrement from '/images/icon-decrement-quantity.svg'
 import './index.css'
 
 interface ButtonProps {
