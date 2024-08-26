@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react'
 import svg from '/images/icon-order-confirmed.svg'
 import './index.css'
+import './mediaqueries.css'
 
 interface CardConfirmProps {
     cartItems: object[]

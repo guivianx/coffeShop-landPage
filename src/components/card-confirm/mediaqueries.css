@@ -1,0 +1,30 @@
+@media screen and (max-width: 620px) {
+    .card-confirm {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .card-confirm {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .card-confirm {
+        width: 300px;
+    }
+
+    .card-confirm > h1 {
+        font-size: 2.6rem;
+    }
+
+    .card-confirm > div > .list-card-confirm {
+        padding: 10px 10px 15px 10px;
+        font-size: 1.2rem;
+    }
+
+    .card-confirm > .button-card-confirm {
+        font-size: 1.5rem;
+    }
+}
